@@ -1,0 +1,181 @@
+2026-04-26 13:32:00,140 [INFO] ai_scheduler: [Agent] Starting for Jordan on 2026-04-26 (3 tasks, 60 min available)
+2026-04-26 13:32:00,143 [INFO] ai_scheduler: [RAG] Retrieved 4 guidelines
+2026-04-26 13:32:00,144 [INFO] ai_scheduler: [Agent] Iteration 1/3
+2026-04-26 13:32:01,251 [INFO] ai_scheduler: [Agent] Iteration 1 reply:
+SELECTED TASKS: Mochi Morning walk, Kinako Morning Feed, Kinako Morning walk
+REASONING: All listed tasks are HIGH priority. Mochi's walk is scheduled first, followed by Kinako's feed and then walk, to ensure both dogs receive essential care within the available time, in accordance with care guidelines for dogs.
+CONCERNS: None
+
+2026-04-26 13:32:01,251 [INFO] ai_scheduler: [Critique] OK
+2026-04-26 13:32:01,252 [INFO] ai_scheduler: [Agent] Schedule approved after 1 iteration(s).
+2026-04-26 13:32:01,252 [INFO] ai_scheduler: [Agent] Final: 2 task(s) — Morning walk, Morning Feed | 40/60 min used
+2026-04-26 13:33:55,320 [INFO] ai_scheduler: [Agent] Starting for Jordan on 2026-04-26 (5 tasks, 120 min available)
+2026-04-26 13:33:55,322 [INFO] ai_scheduler: [RAG] Retrieved 4 guidelines
+2026-04-26 13:33:55,323 [INFO] ai_scheduler: [Agent] Iteration 1/3
+2026-04-26 13:33:56,339 [INFO] ai_scheduler: [Agent] Iteration 1 reply:
+SELECTED TASKS: Mochi - Morning walk, Kinako - Morning Feed, Kinako - Morning walk, Mochi - Morning Feed, Kinako - Morning Feed
+REASONING: Both dogs require morning walks and feeding, which are HIGH priority according to the care guidelines. I scheduled Mochi's walk first as requested. Irregular feeding causes digestive upset and can cause hepatic lipidosis, so all feeding tasks have been prioritised.
+CONCERNS: None
+
+2026-04-26 13:33:56,340 [INFO] ai_scheduler: [Critique] OK
+2026-04-26 13:33:56,340 [INFO] ai_scheduler: [Agent] Schedule approved after 1 iteration(s).
+2026-04-26 13:33:56,340 [INFO] ai_scheduler: [Agent] Final: 2 task(s) — Morning walk, Morning Feed | 25/120 min used
+2026-04-26 13:34:31,937 [INFO] ai_scheduler: [Agent] Starting for Jordan on 2026-04-26 (5 tasks, 120 min available)
+2026-04-26 13:34:31,938 [INFO] ai_scheduler: [RAG] Retrieved 4 guidelines
+2026-04-26 13:34:31,938 [INFO] ai_scheduler: [Agent] Iteration 1/3
+2026-04-26 13:34:32,781 [INFO] ai_scheduler: [Agent] Iteration 1 reply:
+SELECTED TASKS: Mochi - Morning walk, Kinako - Morning Feed, Kinako - Morning walk, Mochi - Morning Feed, Kinako - Morning Feed
+REASONING: Both dogs require morning walks and feeding, which are HIGH priority. Prioritizing feeding and walks ensures their health and well-being based on the care guidelines.
+CONCERNS: None
+
+2026-04-26 13:34:32,782 [INFO] ai_scheduler: [Critique] OK
+2026-04-26 13:34:32,782 [INFO] ai_scheduler: [Agent] Schedule approved after 1 iteration(s).
+2026-04-26 13:34:32,782 [INFO] ai_scheduler: [Agent] Final: 2 task(s) — Morning walk, Morning Feed | 25/120 min used
+2026-04-26 13:35:07,486 [INFO] ai_scheduler: [Agent] Starting for Jordan on 2026-04-26 (5 tasks, 120 min available)
+2026-04-26 13:35:07,487 [INFO] ai_scheduler: [RAG] Retrieved 4 guidelines
+2026-04-26 13:35:07,488 [INFO] ai_scheduler: [Agent] Iteration 1/3
+2026-04-26 13:35:08,395 [INFO] ai_scheduler: [Agent] Iteration 1 reply:
+SELECTED TASKS: Mochi Morning walk, Kinako Morning Feed, Kinako Morning walk, Mochi Morning Feed, Kinako Morning Feed
+REASONING: All tasks are HIGH priority and fit within the available time slots. Prioritizing health-critical tasks like meals and walks for both dogs ensures their well-being and aligns with the care guidelines.
+CONCERNS: None
+
+2026-04-26 13:35:08,396 [INFO] ai_scheduler: [Critique] OK
+2026-04-26 13:35:08,396 [INFO] ai_scheduler: [Agent] Schedule approved after 1 iteration(s).
+2026-04-26 13:35:08,397 [INFO] ai_scheduler: [Agent] Final: 2 task(s) — Morning walk, Morning Feed | 25/120 min used
+2026-04-26 13:35:14,534 [INFO] ai_scheduler: [Agent] Starting for Jordan on 2026-04-27 (3 tasks, 120 min available)
+2026-04-26 13:35:14,536 [INFO] ai_scheduler: [RAG] Retrieved 4 guidelines
+2026-04-26 13:35:14,536 [INFO] ai_scheduler: [Agent] Iteration 1/3
+2026-04-26 13:35:15,442 [INFO] ai_scheduler: [Agent] Iteration 1 reply:
+SELECTED TASKS: Mochi Morning Feed, Kinako Morning Feed
+REASONING: Both morning feeding tasks are HIGH priority and must be included. Feeding tasks should never be skipped, and the timing fits within the available window.
+CONCERNS: None
+
+2026-04-26 13:35:15,442 [INFO] ai_scheduler: [Critique] OK
+2026-04-26 13:35:15,442 [INFO] ai_scheduler: [Agent] Schedule approved after 1 iteration(s).
+2026-04-26 13:35:15,443 [INFO] ai_scheduler: [Agent] Final: 1 task(s) — Morning Feed | 5/120 min used
+2026-04-26 13:36:42,540 [INFO] ai_scheduler: [Agent] Starting for Jordan on 2026-04-27 (5 tasks, 120 min available)
+2026-04-26 13:36:42,542 [INFO] ai_scheduler: [RAG] Retrieved 4 guidelines
+2026-04-26 13:36:42,543 [INFO] ai_scheduler: [Agent] Iteration 1/3
+2026-04-26 13:36:43,547 [INFO] ai_scheduler: [Agent] Iteration 1 reply:
+SELECTED TASKS: Mochi Morning walk, Kinako Morning walk, Kinako Morning Feed, Mochi Morning Feed
+REASONING: Both dogs require a morning walk and feed, which are HIGH priority. The walks can be scheduled consecutively at 09:00 and 11:00, followed by the feeds at 11:15 and 11:45.
+CONCERNS: None
+
+2026-04-26 13:36:43,547 [INFO] ai_scheduler: [Critique] OK
+2026-04-26 13:36:43,547 [INFO] ai_scheduler: [Agent] Schedule approved after 1 iteration(s).
+2026-04-26 13:36:43,548 [INFO] ai_scheduler: [Agent] Final: 2 task(s) — Morning Feed, Morning walk | 35/120 min used
+2026-04-26 13:36:54,552 [INFO] ai_scheduler: [Agent] Starting for Jordan on 2026-04-26 (5 tasks, 120 min available)
+2026-04-26 13:36:54,554 [INFO] ai_scheduler: [RAG] Retrieved 4 guidelines
+2026-04-26 13:36:54,556 [INFO] ai_scheduler: [Agent] Iteration 1/3
+2026-04-26 13:36:55,642 [INFO] ai_scheduler: [Agent] Iteration 1 reply:
+SELECTED TASKS: Morning walk, Morning Feed, Morning Feed
+REASONING: I scheduled Mochi's morning walk at 09:00 and Mochi's feed at 11:45 as well as Kinako's feed at 11:15 since those are the only high-priority tasks that fit. I was unable to schedule Kinako's walk as it overlapped with Mochi's feeding and the initial preference was for Mochi's tasks.
+CONCERNS: Morning walk for Kinako was not scheduled.
+
+2026-04-26 13:36:55,643 [INFO] ai_scheduler: [Critique] Model flagged: Morning walk for Kinako was not scheduled.
+2026-04-26 13:36:55,643 [INFO] ai_scheduler: [Agent] Iteration 2/3
+2026-04-26 13:36:56,627 [INFO] ai_scheduler: [Agent] Iteration 2 reply:
+SELECTED TASKS: Morning walk, Morning Feed, Morning walk, Morning Feed
+REASONING: I scheduled Mochi's morning walk at 09:00 and Kinako's walk at 11:00, followed by Kinako's feed at 11:30 and Mochi's feed at 11:50 since those are all high-priority tasks that fit within the available windows. Prioritizing walks and feeds is crucial for regulating energy and metabolism.
+CONCERNS: None
+
+2026-04-26 13:36:56,627 [INFO] ai_scheduler: [Critique] OK
+2026-04-26 13:36:56,628 [INFO] ai_scheduler: [Agent] Schedule approved after 2 iteration(s).
+2026-04-26 13:36:56,628 [INFO] ai_scheduler: [Agent] Final: 2 task(s) — Morning Feed, Morning walk | 35/120 min used
+2026-04-26 14:06:38,265 [INFO] ai_scheduler: [Agent] Starting for Jordan on 2026-04-26 (5 tasks, 120 min available)
+2026-04-26 14:06:39,927 [INFO] ai_scheduler: [RAG] Retrieved 4 guidelines
+2026-04-26 14:06:39,927 [INFO] ai_scheduler: [Agent] Iteration 1/3
+2026-04-26 14:06:39,930 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2026-04-26 14:06:41,125 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-04-26 14:06:41,132 [INFO] ai_scheduler: [Agent] Iteration 1 reply:
+SELECTED TASKS: Mochi Morning Walk, Kinako Morning Feed, Kinako Morning Walk, Mochi Morning Feed
+REASONING: All listed tasks are high priority and fit within the owner's available time slots. Prioritizing morning walks regulates the dogs' energy for the rest of the day, and scheduled feeding avoids digestive upset.
+CONCERNS: None
+
+2026-04-26 14:06:41,133 [INFO] ai_scheduler: [Critique] HIGH-priority task 'Morning  Feed' (20 min) was skipped but 40 min remain — please include it.; HIGH-priority task 'Morning  Walk' (20 min) was skipped but 40 min remain — please include it.; HIGH-priority task 'Morning  Feed' (20 min) was skipped but 40 min remain — please include it.
+2026-04-26 14:06:41,133 [INFO] ai_scheduler: [Agent] Iteration 2/3
+2026-04-26 14:06:41,134 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2026-04-26 14:06:42,120 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-04-26 14:06:42,123 [INFO] ai_scheduler: [Agent] Iteration 2 reply:
+SELECTED TASKS: Mochi Morning Walk, Kinako Morning Feed, Kinako Morning Feed, Kinako Morning Walk, Mochi Morning Feed
+REASONING: All listed tasks are high priority. Prioritizing morning walks regulates the dogs' energy for the rest of the day, and scheduled feeding avoids digestive upset.
+CONCERNS: Overlapping task times.
+
+2026-04-26 14:06:42,124 [INFO] ai_scheduler: [Critique] HIGH-priority task 'Morning  Feed' (20 min) was skipped but 20 min remain — please include it.; HIGH-priority task 'Morning  Walk' (20 min) was skipped but 20 min remain — please include it.; HIGH-priority task 'Morning  Feed' (20 min) was skipped but 20 min remain — please include it.; Model flagged: Overlapping task times.
+2026-04-26 14:06:42,124 [INFO] ai_scheduler: [Agent] Iteration 3/3
+2026-04-26 14:06:42,124 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2026-04-26 14:06:43,120 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-04-26 14:06:43,123 [INFO] ai_scheduler: [Agent] Iteration 3 reply:
+SELECTED TASKS: Mochi Morning Walk, Kinako Morning Feed, Mochi Morning Feed, Kinako Morning Walk
+REASONING: All tasks are high priority and fit within the available time. Prioritizing morning walks regulates energy, while consistent feeding times avoid digestive upset.
+CONCERNS: None
+
+2026-04-26 14:06:43,124 [INFO] ai_scheduler: [Critique] HIGH-priority task 'Morning  Feed' (20 min) was skipped but 40 min remain — please include it.; HIGH-priority task 'Morning  Walk' (20 min) was skipped but 40 min remain — please include it.; HIGH-priority task 'Morning  Feed' (20 min) was skipped but 40 min remain — please include it.
+2026-04-26 14:06:43,124 [INFO] ai_scheduler: [Agent] Final: 2 task(s) — Morning walk, Morning Feed | 40/120 min used
+2026-04-26 14:07:14,311 [INFO] ai_scheduler: [Agent] Starting for Jordan on 2026-04-26 (5 tasks, 120 min available)
+2026-04-26 14:07:15,709 [INFO] ai_scheduler: [RAG] Retrieved 4 guidelines
+2026-04-26 14:07:15,709 [INFO] ai_scheduler: [Agent] Iteration 1/3
+2026-04-26 14:07:15,710 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2026-04-26 14:07:17,063 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-26 14:07:17,065 [ERROR] ai_scheduler: [Agent] API error on iteration 1: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.', 'status': 'RESOURCE_EXHAUSTED'}}
+2026-04-26 14:07:17,066 [INFO] ai_scheduler: [Agent] Final: 0 task(s) — none | 0/120 min used
+2026-04-26 14:07:17,591 [INFO] ai_scheduler: [Agent] Starting for Jordan on 2026-04-27 (5 tasks, 120 min available)
+2026-04-26 14:07:18,994 [INFO] ai_scheduler: [RAG] Retrieved 4 guidelines
+2026-04-26 14:07:18,995 [INFO] ai_scheduler: [Agent] Iteration 1/3
+2026-04-26 14:07:18,996 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2026-04-26 14:07:19,924 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-04-26 14:07:19,927 [INFO] ai_scheduler: [Agent] Iteration 1 reply:
+SELECTED TASKS: Mochi Morning Walk, Kinako Morning Feed, Mochi Morning Feed, Kinako Morning Walk
+REASONING: All tasks are HIGH priority and can be completed within the available time windows. Walks are prioritized in the morning to regulate energy levels, and consistent feeding times are important for digestive health.
+CONCERNS: None
+
+2026-04-26 14:07:19,927 [INFO] ai_scheduler: [Critique] HIGH-priority task 'Morning  Feed' (20 min) was skipped but 40 min remain — please include it.; HIGH-priority task 'Morning  Walk' (20 min) was skipped but 40 min remain — please include it.; HIGH-priority task 'Morning  Feed' (20 min) was skipped but 40 min remain — please include it.
+2026-04-26 14:07:19,928 [INFO] ai_scheduler: [Agent] Iteration 2/3
+2026-04-26 14:07:19,928 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2026-04-26 14:07:20,786 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-04-26 14:07:20,791 [INFO] ai_scheduler: [Agent] Iteration 2 reply:
+SELECTED TASKS: Mochi Morning Walk, Kinako Morning Feed, Mochi Morning Feed, Kinako Morning Walk
+REASONING: All listed tasks are HIGH priority and fit within the available time slots. Prioritizing walks and consistent feeding times is crucial for the dogs' well-being, per the care guidelines.
+CONCERNS: None
+
+2026-04-26 14:07:20,791 [INFO] ai_scheduler: [Critique] HIGH-priority task 'Morning  Feed' (20 min) was skipped but 40 min remain — please include it.; HIGH-priority task 'Morning  Walk' (20 min) was skipped but 40 min remain — please include it.; HIGH-priority task 'Morning  Feed' (20 min) was skipped but 40 min remain — please include it.
+2026-04-26 14:07:20,791 [INFO] ai_scheduler: [Agent] Iteration 3/3
+2026-04-26 14:07:20,793 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2026-04-26 14:07:21,661 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-04-26 14:07:21,666 [INFO] ai_scheduler: [Agent] Iteration 3 reply:
+SELECTED TASKS: Mochi Morning Walk, Mochi Morning Feed, Kinako Morning Feed, Kinako Morning Walk
+REASONING: All tasks are HIGH priority and fit within the available time. Morning walks are important for energy regulation, while consistent feeding times are crucial for digestive health, as per care guidelines.
+CONCERNS: None
+
+2026-04-26 14:07:21,666 [INFO] ai_scheduler: [Critique] HIGH-priority task 'Morning  Feed' (20 min) was skipped but 40 min remain — please include it.; HIGH-priority task 'Morning  Walk' (20 min) was skipped but 40 min remain — please include it.; HIGH-priority task 'Morning  Feed' (20 min) was skipped but 40 min remain — please include it.
+2026-04-26 14:07:21,667 [INFO] ai_scheduler: [Agent] Final: 2 task(s) — Morning walk, Morning Feed | 40/120 min used
+2026-04-26 14:24:17,787 [INFO] ai_scheduler: [Agent] Starting for Jordan on 2026-04-26 (5 tasks, 120 min available)
+2026-04-26 14:24:19,304 [INFO] ai_scheduler: [RAG] Retrieved 4 guidelines
+2026-04-26 14:24:19,304 [INFO] ai_scheduler: [Agent] Iteration 1/3
+2026-04-26 14:24:19,305 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2026-04-26 14:24:20,244 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-04-26 14:24:20,249 [INFO] ai_scheduler: [Agent] Iteration 1 reply:
+SELECTED TASKS: 1, 3, 4, 5
+REASONING: All tasks are HIGH priority and fit within the available time. The dogs' morning walks are scheduled first to regulate their energy for the day.
+CONCERNS: Task 2 (Morning Feed for Mochi) cannot be scheduled because it falls outside of the available time window.
+
+2026-04-26 14:24:20,249 [INFO] ai_scheduler: [Critique] HIGH-priority task 'Morning Feed' (10 min) was skipped but 40 min remain — please include it (task number in the list above).; Model flagged: Task 2 (Morning Feed for Mochi) cannot be scheduled because it falls outside of the available time window.
+2026-04-26 14:24:20,250 [INFO] ai_scheduler: [Agent] Iteration 2/3
+2026-04-26 14:24:20,250 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2026-04-26 14:24:21,082 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-04-26 14:24:21,136 [INFO] ai_scheduler: [Agent] Iteration 2 reply:
+SELECTED TASKS: 1, 2, 3, 4
+REASONING: All listed tasks except #5 are included to fit within the available time. Prioritizing feeding and walks is important for the dogs' health and well-being.
+CONCERNS: Task 5 (Morning Feed for Kinako) cannot be scheduled because of time constraints.
+
+2026-04-26 14:24:21,136 [INFO] ai_scheduler: [Critique] HIGH-priority task 'Morning Feed' (20 min) was skipped but 50 min remain — please include it (task number in the list above).; Model flagged: Task 5 (Morning Feed for Kinako) cannot be scheduled because of time constraints.
+2026-04-26 14:24:21,137 [INFO] ai_scheduler: [Agent] Iteration 3/3
+2026-04-26 14:24:21,137 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2026-04-26 14:24:21,902 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-04-26 14:24:21,905 [INFO] ai_scheduler: [Agent] Iteration 3 reply:
+SELECTED TASKS: 1, 2, 3, 5
+REASONING: All listed tasks except #4 are included to fit within the available time. Prioritizing feeding and walks is important for the dogs' health and well-being.
+CONCERNS: Task 4 (Morning Walk for Kinako) cannot be scheduled because of time constraints.
+
+2026-04-26 14:24:21,905 [INFO] ai_scheduler: [Critique] HIGH-priority task 'Morning Walk' (20 min) was skipped but 50 min remain — please include it (task number in the list above).; Model flagged: Task 4 (Morning Walk for Kinako) cannot be scheduled because of time constraints.
+2026-04-26 14:24:21,905 [INFO] ai_scheduler: [Agent] Final: 4 task(s) — Morning walk, Morning Feed, Morning Feed, Morning Feed | 70/120 min used

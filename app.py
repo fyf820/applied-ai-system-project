@@ -1,6 +1,15 @@
+import logging
+import os
+
 import streamlit as st
 from datetime import time, date
 from pawpal_system import Owner, Pet, Task, Schedule, TimeSlot
+
+try:
+    from ai_scheduler import run_agentic_schedule
+    _AI_AVAILABLE = True
+except ImportError:
+    _AI_AVAILABLE = False
 
 
 def _to_minutes(t: time) -> int:
@@ -325,6 +334,47 @@ else:
     else:
         st.info("No tasks yet. Add one above.")
 
+# ── AI Scheduling Settings ────────────────────────────────────────────────
+st.divider()
+st.subheader("AI Scheduling Settings")
+
+with st.expander("Configure AI scheduler (optional)", expanded=False):
+    st.caption(
+        "Provide an Anthropic API key to enable AI scheduling. "
+        "The agent retrieves relevant pet-care guidelines (RAG) and self-critiques "
+        "its plan before finalising the schedule."
+    )
+    api_key_default = os.environ.get("ANTHROPIC_API_KEY", "")
+    api_key_input = st.text_input(
+        "Google AI Studio API key",
+        value=api_key_default,
+        type="password",
+        placeholder="AIza…",
+        help="Get a free key at aistudio.google.com. Or set ANTHROPIC_API_KEY env var.",
+    )
+    if api_key_input:
+        st.session_state["_api_key"] = api_key_input
+
+    if not _AI_AVAILABLE:
+        st.warning(
+            "`anthropic` package not found. Run `pip install anthropic` to enable AI mode."
+        )
+    elif st.session_state.get("_api_key"):
+        use_ai = st.checkbox(
+            "Use AI scheduler",
+            value=st.session_state.get("_use_ai", False),
+            help="AI will plan, critique, and refine the schedule using RAG context.",
+        )
+        st.session_state["_use_ai"] = use_ai
+        if use_ai:
+            st.info(
+                "AI mode ON — AI retrieves care guidelines and self-critiques "
+                "the schedule before finalising it."
+            )
+    else:
+        st.info("Enter an API key above to enable AI scheduling.")
+        st.session_state["_use_ai"] = False
+
 # ── Generate schedule ─────────────────────────
 st.divider()
 st.subheader("Build Schedule")
@@ -350,12 +400,40 @@ if st.button("Generate schedule"):
             task for p in owner.get_pets() for task in p.tasks
             if task.occurs_on(schedule_date)
         ]
-        schedule = Schedule(date=str(schedule_date), owner_id=owner.id)
-        schedule.generate(
-            available_tasks=eligible_tasks,
-            available_slots=merged_slots,
-            owner_preferences=owner.preferences,
-        )
+
+        use_ai = st.session_state.get("_use_ai", False)
+        api_key = st.session_state.get("_api_key", "").strip()
+
+        if use_ai and _AI_AVAILABLE and api_key:
+            with st.spinner("AI agent is building your schedule…"):
+                try:
+                    schedule, agent_log = run_agentic_schedule(
+                        owner=owner,
+                        eligible_tasks=eligible_tasks,
+                        merged_slots=merged_slots,
+                        schedule_date=schedule_date,
+                        api_key=api_key,
+                    )
+                    st.session_state.agent_log = agent_log
+                except Exception as exc:
+                    logging.exception("AI scheduler failed")
+                    st.error(f"AI scheduler error: {exc}. Falling back to rule-based mode.")
+                    schedule = Schedule(date=str(schedule_date), owner_id=owner.id)
+                    schedule.generate(
+                        available_tasks=eligible_tasks,
+                        available_slots=merged_slots,
+                        owner_preferences=owner.preferences,
+                    )
+                    st.session_state.agent_log = []
+        else:
+            schedule = Schedule(date=str(schedule_date), owner_id=owner.id)
+            schedule.generate(
+                available_tasks=eligible_tasks,
+                available_slots=merged_slots,
+                owner_preferences=owner.preferences,
+            )
+            st.session_state.agent_log = []
+
         owner.add_schedule(schedule)
         st.session_state.schedule = schedule
         st.session_state.merged_slots = merged_slots
@@ -496,3 +574,14 @@ if "schedule" in st.session_state:
         if conflict_rows:
             st.markdown("**Skipped tasks with time conflicts:**")
             st.table(conflict_rows)
+
+    # --- AI Agent Log ---
+    if st.session_state.get("agent_log"):
+        st.markdown("#### AI Agent Log")
+        st.caption(
+            "Each step taken by the agentic scheduler: RAG retrieval, "
+            "AI iterations, self-critiques, and final selection."
+        )
+        for entry in st.session_state.agent_log:
+            with st.expander(entry["step"], expanded=False):
+                st.text(entry["content"])
