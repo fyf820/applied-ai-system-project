@@ -37,7 +37,7 @@ flowchart TD
     %% ── Agentic loop ────────────────────────────────────────────────────────
     subgraph AGENT["🤖  Agentic Scheduler  ·  ai_scheduler.py"]
         direction TB
-        CLAUDE["Claude Haiku\n― selects tasks\n― writes reasoning\n― flags concerns"]
+        CLAUDE["Gemini 2.0 Flash\n― selects tasks\n― writes reasoning\n― flags concerns"]
         CRITIC["Self-Critique\nRule-based checker\n• Any HIGH task skipped that fits?\n• Unresolved model concerns?"]
         CLAUDE -->|"SELECTED TASKS\nREASONING · CONCERNS"| CRITIC
         CRITIC -->|"issues found\n↺ revise  (≤ 3 rounds)"| CLAUDE
