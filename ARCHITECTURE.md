@@ -81,7 +81,7 @@ flowchart TD
     PYTEST -.->|"validates scheduling logic"| GREEDY
     PYTEST -.->|"validates Schedule methods"| SCHED
 ```
-
+![alt text](../assets/pet_diagram.svg)
 ---
 
 ## Data Flow  (step-by-step)

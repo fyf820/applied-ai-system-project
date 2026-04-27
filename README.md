@@ -47,6 +47,7 @@ User Input (Streamlit)
 Fallback: if no API key (or API error), the original greedy algorithm runs instead.
 Test Suite (pytest, 13 tests) validates the core scheduling logic independently.
 ```
+![alt text](../assets/pet_diagram.svg)
 
 **Key files:**
 
