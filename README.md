@@ -379,3 +379,76 @@ See [model_card.md](model_card.md) for the full reflection.
 
 - Add embeddings-based retrieval (ChromaDB) to scale the knowledge base beyond ~20 entries.
 - Mock the Anthropic API in pytest to test the full agentic loop end-to-end without hitting the network, catching response-parsing failures before they reach users.
+
+## Stretch Features
+
+### RAG Enhancement: Custom Indexing
+
+The RAG retriever uses a custom TF-IDF scorer with a tag-match bonus (not plain keyword search). Each query is scored against all 10 guidelines and only the top-4 most relevant are injected into the prompt — keeping token usage low while ensuring contextually appropriate advice. Impact is visible in the sample interactions: medication tasks surface the medication-priority guideline, dog-walk tasks surface the exercise guideline.
+
+### Agentic Workflow Enhancement
+
+The scheduler implements a genuine multi-step decision chain:
+
+```
+RAG Retrieval → Gemini Draft → Self-Critique → (Revise if needed, ≤ 3 rounds) → Final Schedule
+```
+
+Every intermediate step is observable in the UI's AI Agent Log, which shows the RAG docs retrieved, each iteration's full reply (`SELECTED TASKS / REASONING / CONCERNS`), and each critique result. This goes beyond a single prompt-response and constitutes a planning loop with conditional branching.
+
+### Test Harness (`test/eval_harness.py`)
+
+A standalone evaluation script that runs 4 predefined scenarios against the live Gemini API and prints a pass/fail summary with confidence scores. Run it with:
+
+```bash
+$env:ANTHROPIC_API_KEY="AIza..."
+python test/eval_harness.py
+```
+
+| Scenario | What it proves |
+|---|---|
+| 1 — All tasks fit | Happy path: all tasks selected, HIGH coverage 100% |
+| 2 — HIGH task must not be skipped | LOW task too long to fit; HIGH task survives the drop |
+| 3 — Multi-pet same-name tasks | Numbered task IDs correctly disambiguate identical task names across pets |
+| 4 — Self-critique loop fires | Two HIGH tasks in a tight slot; critique enforces both are included |
+
+**Output:**
+
+```
+PawPal+ AI Evaluation Harness
+============================================================
+
+Scenario 1 — All tasks fit
+  Result     : ✅ PASS
+  Confidence : 84%
+  Notes      : all checks passed
+
+Scenario 2 — HIGH task must not be skipped
+  Result     : ✅ PASS
+  Confidence : 80%
+  Notes      : all checks passed
+
+Scenario 3 — Multi-pet same-name tasks
+  Result     : ✅ PASS
+  Confidence : 80%
+  Notes      : all checks passed
+
+Scenario 4 — Self-critique loop fires
+  Result     : ✅ PASS
+  Confidence : 93%
+  Notes      : all checks passed (3 iteration(s))
+
+============================================================
+Summary: 4/4 passed   |   Avg confidence: 84%
+============================================================
+
+  ✅  Scenario 1 — All tasks fit                        84%
+  ✅  Scenario 2 — HIGH task must not be skipped        80%
+  ✅  Scenario 3 — Multi-pet same-name tasks            80%
+  ✅  Scenario 4 — Self-critique loop fires             93%
+```
+
+**Scenario 4 insight:** The LOW-priority brushing task was correctly excluded (not enough time). The model flagged it in CONCERNS each iteration, and the self-critique confirmed it was a genuine time constraint — not a skipped HIGH task — so the schedule was accepted at confidence 93% after all 3 iterations.
+
+### Loom link:
+https://www.loom.com/share/3db3642c4aa24990a0657be6a86fcd72

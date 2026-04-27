@@ -162,14 +162,15 @@ def test_critique_surfaces_unresolved_model_concerns():
     the critique must include that concern so it is addressed in the next round.
     """
     tasks = [Task(title="Feed cat", duration_minutes=5, priority="medium")]
+    # Concern explicitly mentions a HIGH-priority issue — must be surfaced.
     result = _self_critique(
         tasks,
-        "Possible overlap with grooming at 09:00",
+        "Morning walk (HIGH priority) may conflict with feeding at 09:00",
         tasks,
         _slot(60),
     )
-    assert "overlap" in result.lower(), (
-        f"Expected model's concern to be surfaced. Got: {result}"
+    assert "high" in result.lower(), (
+        f"Expected HIGH-related concern to be surfaced. Got: {result}"
     )
 
 

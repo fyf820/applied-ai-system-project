@@ -179,3 +179,73 @@ CONCERNS: Task 4 (Morning Walk for Kinako) cannot be scheduled because of time c
 
 2026-04-26 14:24:21,905 [INFO] ai_scheduler: [Critique] HIGH-priority task 'Morning Walk' (20 min) was skipped but 50 min remain — please include it (task number in the list above).; Model flagged: Task 4 (Morning Walk for Kinako) cannot be scheduled because of time constraints.
 2026-04-26 14:24:21,905 [INFO] ai_scheduler: [Agent] Final: 4 task(s) — Morning walk, Morning Feed, Morning Feed, Morning Feed | 70/120 min used
+2026-04-26 22:18:22,605 [INFO] ai_scheduler: [Agent] Starting for Jordan on 2026-04-26 (3 tasks, 90 min available)
+2026-04-26 22:18:23,179 [INFO] ai_scheduler: [RAG] Retrieved 4 guidelines
+2026-04-26 22:18:23,179 [INFO] ai_scheduler: [Agent] Iteration 1/3
+2026-04-26 22:18:23,180 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2026-04-26 22:18:24,137 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-04-26 22:18:24,139 [INFO] ai_scheduler: [Agent] Iteration 1 reply:
+SELECTED TASKS: 1, 2, 3
+REASONING: Mochi's medication is HIGH priority and is scheduled first. A morning walk is also important for dogs, and play reduces anxiety.
+CONCERNS: None
+2026-04-26 22:18:24,139 [INFO] ai_scheduler: [Critique] OK
+2026-04-26 22:18:24,139 [INFO] ai_scheduler: [Agent] Schedule approved after 1 iteration(s).
+2026-04-26 22:18:24,140 [INFO] ai_scheduler: [Agent] Final: 3 task(s) — Give Mochi meds, Morning walk, Play fetch | 55/90 min used
+2026-04-26 22:18:24,141 [INFO] ai_scheduler: [Confidence] 0.84  (HIGH coverage=1.00, time efficiency=0.61)
+2026-04-26 22:18:24,142 [INFO] ai_scheduler: [Agent] Starting for Sarah on 2026-04-26 (2 tasks, 20 min available)
+2026-04-26 22:18:24,636 [INFO] ai_scheduler: [RAG] Retrieved 4 guidelines
+2026-04-26 22:18:24,637 [INFO] ai_scheduler: [Agent] Iteration 1/3
+2026-04-26 22:18:24,637 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2026-04-26 22:18:25,694 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-04-26 22:18:25,697 [INFO] ai_scheduler: [Agent] Iteration 1 reply:
+SELECTED TASKS: 1
+REASONING: Whiskers' medication (task 1) is high priority and must be included. There is not enough time remaining to also schedule Whiskers' play (task 2) within the available 20 minutes.
+CONCERNS: None
+
+2026-04-26 22:18:25,698 [INFO] ai_scheduler: [Critique] OK
+2026-04-26 22:18:25,699 [INFO] ai_scheduler: [Agent] Schedule approved after 1 iteration(s).
+2026-04-26 22:18:25,699 [INFO] ai_scheduler: [Agent] Final: 1 task(s) — Give Whiskers meds | 10/20 min used
+2026-04-26 22:18:25,702 [INFO] ai_scheduler: [Confidence] 0.80  (HIGH coverage=1.00, time efficiency=0.50)
+2026-04-26 22:18:25,705 [INFO] ai_scheduler: [Agent] Starting for Alex on 2026-04-26 (2 tasks, 60 min available)
+2026-04-26 22:18:26,212 [INFO] ai_scheduler: [RAG] Retrieved 4 guidelines
+2026-04-26 22:18:26,213 [INFO] ai_scheduler: [Agent] Iteration 1/3
+2026-04-26 22:18:26,213 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2026-04-26 22:18:27,051 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-04-26 22:18:27,062 [INFO] ai_scheduler: [Agent] Iteration 1 reply:
+SELECTED TASKS: 1, 2
+REASONING: Both tasks are HIGH priority and fit within the available time. Dogs need a morning walk to regulate energy, and while cats don't typically go for walks, Luna has a morning walk scheduled, which should be accommodated.
+CONCERNS: None
+
+2026-04-26 22:18:27,063 [INFO] ai_scheduler: [Critique] OK
+2026-04-26 22:18:27,064 [INFO] ai_scheduler: [Agent] Schedule approved after 1 iteration(s).
+2026-04-26 22:18:27,064 [INFO] ai_scheduler: [Agent] Final: 2 task(s) — Morning Walk, Morning Walk | 30/60 min used
+2026-04-26 22:18:27,067 [INFO] ai_scheduler: [Confidence] 0.80  (HIGH coverage=1.00, time efficiency=0.50)
+2026-04-26 22:18:27,067 [INFO] ai_scheduler: [Agent] Starting for Kim on 2026-04-26 (3 tasks, 30 min available)
+2026-04-26 22:18:27,594 [INFO] ai_scheduler: [RAG] Retrieved 4 guidelines
+2026-04-26 22:18:27,594 [INFO] ai_scheduler: [Agent] Iteration 1/3
+2026-04-26 22:18:27,595 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2026-04-26 22:18:28,686 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-04-26 22:18:28,687 [INFO] ai_scheduler: [Agent] Iteration 1 reply:
+SELECTED TASKS: 1, 2
+REASONING: Rex needs his medication (task 1) and a walk (task 2), both HIGH priority, and they fit within the available 30 minutes. Skipping them would be detrimental to his health and well-being.
+CONCERNS: Task 3 (brushing) is skipped due to lack of time.
+2026-04-26 22:18:28,687 [INFO] ai_scheduler: [Critique] Model flagged: Task 3 (brushing) is skipped due to lack of time.
+2026-04-26 22:18:28,687 [INFO] ai_scheduler: [Agent] Iteration 2/3
+2026-04-26 22:18:28,688 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2026-04-26 22:18:29,710 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-04-26 22:18:29,712 [INFO] ai_scheduler: [Agent] Iteration 2 reply:
+SELECTED TASKS: 1, 2
+REASONING: Rex needs his medication and a walk, both HIGH priority. These tasks (1 and 2) are scheduled because they fit within the available 30 minutes and address his immediate health and exercise needs.
+CONCERNS: Task 3 (brushing) is skipped due to lack of time.
+2026-04-26 22:18:29,713 [INFO] ai_scheduler: [Critique] Model flagged: Task 3 (brushing) is skipped due to lack of time.
+2026-04-26 22:18:29,714 [INFO] ai_scheduler: [Agent] Iteration 3/3
+2026-04-26 22:18:29,715 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2026-04-26 22:18:30,844 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-04-26 22:18:30,847 [INFO] ai_scheduler: [Agent] Iteration 3 reply:
+SELECTED TASKS: 1, 2
+REASONING: Tasks 1 and 2 (medication and walk) are HIGH priority and fit within the available 30 minutes. Prioritizing these ensures Rex's immediate health and exercise needs are met, as per the care guidelines.
+CONCERNS: Task 3 (brushing) is skipped due to lack of time.
+
+2026-04-26 22:18:30,848 [INFO] ai_scheduler: [Critique] Model flagged: Task 3 (brushing) is skipped due to lack of time.
+2026-04-26 22:18:30,849 [INFO] ai_scheduler: [Agent] Final: 2 task(s) — Give Rex meds, Short walk | 25/30 min used
+2026-04-26 22:18:30,851 [INFO] ai_scheduler: [Confidence] 0.93  (HIGH coverage=1.00, time efficiency=0.83)
