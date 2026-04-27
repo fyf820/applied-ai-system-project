@@ -356,6 +356,8 @@ The score is logged to `pawpal.log` and shown as the last entry in the AI Agent 
 **Known limitation:**
 When a one-time task and a weekly task share the same priority and time window, the rule-based scheduler applies FIFO ordering (first-added wins). The AI scheduler handles this through Claude's reasoning, but no automated test covers it yet.
 
+**Testing summary:**
+Passed all 26/26 unit tests. Human evaluated incorrect generated schedules, but accuracy improved after adding validation rules.
 ---
 
 ## Reflection
