@@ -47,7 +47,7 @@ User Input (Streamlit)
 Fallback: if no API key (or API error), the original greedy algorithm runs instead.
 Test Suite (pytest, 13 tests) validates the core scheduling logic independently.
 ```
-![alt text](../assets/pet_diagram.svg)
+![alt text](/assets/pet_diagram.svg)
 
 **Key files:**
 
@@ -120,7 +120,7 @@ streamlit run app.py
 python -m pytest
 ```
 Output:
-![alt text](../assets/test.png)
+![alt text](/assets/test.png)
 ---
 
 ## Sample Interactions
@@ -236,7 +236,7 @@ Self-critique: `OK` on the first iteration — no revision needed.
 ---
 
 Sample output in APP:
-![alt text](../assets/AIoutput.png)
+![alt text](/assets/AIoutput.png)
 
 ## Design Decisions
 
